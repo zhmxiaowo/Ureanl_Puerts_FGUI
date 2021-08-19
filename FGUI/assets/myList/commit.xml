@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="200,100" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <graph id="n3_fssg" name="n3" xy="0,0" size="200,100" type="rect"/>
+    <image id="n4_fssg" name="n4" src="fssg7" fileName="rect.png" xy="0,1" size="200,100"/>
+    <text id="n1_fssg" name="title" xy="0,0" size="200,100" fontSize="76" align="center" vAlign="middle" autoSize="none" singleLine="true" text="A&#xA;">
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+  </displayList>
+  <Button/>
+</component>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="fsw5unbf">
+  <resources>
+    <component id="ert30" name="Main.xml" path="/" exported="true"/>
+    <image id="fssg6" name="circle.png" path="/"/>
+    <image id="fssg7" name="rect.png" path="/" scale9grid="137,138,229,239"/>
+    <component id="fssg8" name="commit.xml" path="/"/>
+    <component id="sigwa" name="item.xml" path="/" exported="true"/>
+    <image id="sigwb" name="butYellowGUI.png" path="/"/>
+    <component id="sigwc" name="Button1.xml" path="/"/>
+    <component id="sigwd" name="ButtonInItem.xml" path="/"/>
+  </resources>
+  <publish name="myList"/>
+</packageDescription>

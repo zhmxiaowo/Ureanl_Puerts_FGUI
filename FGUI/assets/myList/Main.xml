@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1280,720">
+  <displayList>
+    <component id="n8_sigw" name="btn" src="sigwc" fileName="Button1.xml" xy="808,356"/>
+    <list id="n9_sigw" name="list" xy="120,79" size="479,550" overflow="scroll" defaultItem="ui://fsw5unbfsigwa"/>
+    <text id="n10_sigw" name="time" xy="804,121" size="240,99" fontSize="43" autoSize="none" text="1"/>
+  </displayList>
+</component>

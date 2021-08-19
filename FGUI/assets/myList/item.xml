@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="350,120">
+  <displayList>
+    <graph id="n2_sigw" name="n2" xy="0,0" size="350,120" type="rect" lineColor="#ff00ff66" fillColor="#ff666666" corner="10"/>
+    <text id="n3_sigw" name="info" xy="114,11" size="233,42" fontSize="20" vAlign="middle" autoSize="none" text="信息"/>
+    <loader id="n6_sigw" name="icon" xy="7,11" size="100,100" fill="scaleNoBorder" autoSize="true"/>
+    <component id="n7_sigw" name="btn" src="sigwd" fileName="ButtonInItem.xml" xy="174,70" size="155,34"/>
+  </displayList>
+</component>
