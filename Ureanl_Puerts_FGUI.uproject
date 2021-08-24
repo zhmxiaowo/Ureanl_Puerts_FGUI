@@ -10,8 +10,17 @@
 			"LoadingPhase": "Default",
 			"AdditionalDependencies": [
 				"CoreUObject",
-				"FairyGUI"
+				"Engine",
+				"FairyGUI",
+				"UMG",
+				"JsEnv"
 			]
+		}	
+	],
+	"Plugins": [
+		{
+			"Name": "Puerts",
+			"Enabled": true
 		}
 	]
 }

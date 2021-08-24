@@ -8956,6 +8956,7 @@ declare module "ue" {
         HandleNetworkError(FailureType: ENetworkFailure, bIsServer: boolean): void;
         DebugRemovePlayer(ControllerId: number): void;
         DebugCreatePlayer(ControllerId: number): void;
+        GetWorldContext() : $Nullable<Object>;
         static StaticClass(): Class;
         static Find(OrigInName: string, Outer?: Object): GameInstance;
         static Load(InName: string): GameInstance;
@@ -10893,6 +10894,7 @@ declare module "ue" {
         AddRollInput(Val: number): void;
         AddPitchInput(Val: number): void;
         ActivateTouchInterface(NewTouchInterface: $Nullable<TouchInterface>): void;
+        SetShowMouseCursor(p0: boolean) : void;
         static StaticClass(): Class;
         static Find(OrigInName: string, Outer?: Object): PlayerController;
         static Load(InName: string): PlayerController;
@@ -37694,6 +37696,16 @@ declare module "ue" {
         static Load(InName: string): JsonUtilitiesDummyObject;
     }
     
+    class JSSubsystem extends GameInstanceSubsystem {
+        constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
+        Tick(deltaTime: number): boolean;
+        Stop(): void;
+        Start(tsFile: string): void;
+        static StaticClass(): Class;
+        static Find(OrigInName: string, Outer?: Object): JSSubsystem;
+        static Load(InName: string): JSSubsystem;
+    }
+    
     class DelegateRuntimeBinding {
         constructor();
         constructor(ObjectName: string, PropertyName: string, FunctionName: string, SourcePath: DynamicPropertyPath, Kind: EBindingKind);
@@ -49538,6 +49550,13 @@ declare module "ue" {
         static Load(InName: string): MultiSelectionTool;
     }
     
+    class MyGameInstance extends GameInstance {
+        constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
+        static StaticClass(): Class;
+        static Find(OrigInName: string, Outer?: Object): MyGameInstance;
+        static Load(InName: string): MyGameInstance;
+    }
+    
     class myList_C extends FairyGUIObject {
         constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
         UberGraphFrame: PointerToUberGraphFrame;
@@ -57389,23 +57408,6 @@ declare module "ue" {
         static Load(InName: string): RandomVector;
     }
     
-    class ReactDeclarationGenerator extends Object {
-        constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
-        Gen(): void;
-        static StaticClass(): Class;
-        static Find(OrigInName: string, Outer?: Object): ReactDeclarationGenerator;
-        static Load(InName: string): ReactDeclarationGenerator;
-    }
-    
-    class ReactWidget extends UserWidget {
-        constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
-        RemoveChild(Content: $Nullable<Widget>): boolean;
-        AddChild(Content: $Nullable<Widget>): PanelSlot;
-        static StaticClass(): Class;
-        static Find(OrigInName: string, Outer?: Object): ReactWidget;
-        static Load(InName: string): ReactWidget;
-    }
-    
     class RecastFilter_UseDefaultArea extends NavigationQueryFilter {
         constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
         static StaticClass(): Class;
@@ -62782,6 +62784,16 @@ declare module "ue" {
         static Load(InName: string): TrueTypeFontFactory;
     }
     
+    class TSMap_C extends LevelScriptActor {
+        constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
+        UberGraphFrame: PointerToUberGraphFrame;
+        ReceiveBeginPlay(): void;
+        ExecuteUbergraph_TSMap(EntryPoint: number): void;
+        static StaticClass(): Class;
+        static Find(OrigInName: string, Outer?: Object): TSMap_C;
+        static Load(InName: string): TSMap_C;
+    }
+    
     class TurnBasedBlueprintLibrary extends BlueprintFunctionLibrary {
         constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
         static RegisterTurnBasedMatchInterfaceObject(WorldContextObject: $Nullable<Object>, PlayerController: $Nullable<PlayerController>, Object: $Nullable<Object>): void;
@@ -62883,17 +62895,6 @@ declare module "ue" {
         static StaticClass(): Class;
         static Find(OrigInName: string, Outer?: Object): UdpMessagingSettings;
         static Load(InName: string): UdpMessagingSettings;
-    }
-    
-    class UIMap_C extends LevelScriptActor {
-        constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
-        UberGraphFrame: PointerToUberGraphFrame;
-        ReceiveBeginPlay(): void;
-        ReceiveTick(DeltaSeconds: number): void;
-        ExecuteUbergraph_UIMap(EntryPoint: number): void;
-        static StaticClass(): Class;
-        static Find(OrigInName: string, Outer?: Object): UIMap_C;
-        static Load(InName: string): UIMap_C;
     }
     
     class UInt16Property extends NumericProperty {
@@ -63003,17 +63004,6 @@ declare module "ue" {
         static StaticClass(): Class;
         static Find(OrigInName: string, Outer?: Object): UMGEditorProjectSettings;
         static Load(InName: string): UMGEditorProjectSettings;
-    }
-    
-    class UMGManager extends BlueprintFunctionLibrary {
-        constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
-        static SynchronizeWidgetProperties(Widget: $Nullable<Widget>): void;
-        static SynchronizeSlotProperties(Slot: $Nullable<PanelSlot>): void;
-        static CreateWidget(World: $Nullable<World>, Class: $Nullable<Class>): UserWidget;
-        static CreateReactWidget(World: $Nullable<World>): ReactWidget;
-        static StaticClass(): Class;
-        static Find(OrigInName: string, Outer?: Object): UMGManager;
-        static Load(InName: string): UMGManager;
     }
     
     class UndoHistorySettings extends Object {
