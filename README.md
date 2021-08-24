@@ -8,8 +8,8 @@
 - 和谷主最新版FairyGUI:https://github.com/fairygui/FairyGUI-unreal
 
 ## 文件
-./Puerts 存放ts的文件夹(原来TS的工程属性就一个tsconfig.json)
-./FGUI 存放FairyGUI工程的文件夹
+- ./Puerts 存放ts的文件夹(原来TS的工程属性就一个tsconfig.json)
+- ./FGUI 存放FairyGUI工程的文件夹
 
 ## 启动
 - UIMap 使用蓝图创建了UI,入口在LevelBlueprint
