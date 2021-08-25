@@ -19,10 +19,6 @@ struct BindingForUE
         puerts::DefineClass<APlayerController>()
         .Method("SetShowMouseCursor",MakeFunction(&APlayerController::SetShowMouseCursor))
         .Register();
-        
-        puerts::DefineClass<UGameInstance>()
-        .Method("GetWorldContext",MakeFunction(&UGameInstance::GetWorldContext))
-        .Register();
     }
 };
 
