@@ -8956,7 +8956,6 @@ declare module "ue" {
         HandleNetworkError(FailureType: ENetworkFailure, bIsServer: boolean): void;
         DebugRemovePlayer(ControllerId: number): void;
         DebugCreatePlayer(ControllerId: number): void;
-        GetWorldContext() : $Nullable<Object>;
         static StaticClass(): Class;
         static Find(OrigInName: string, Outer?: Object): GameInstance;
         static Load(InName: string): GameInstance;
@@ -12266,13 +12265,6 @@ declare module "ue" {
         static StaticClass(): Class;
         static Find(OrigInName: string, Outer?: Object): ActorGroupingUtils;
         static Load(InName: string): ActorGroupingUtils;
-    }
-    
-    class ActorMacros_C extends Actor {
-        constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
-        static StaticClass(): Class;
-        static Find(OrigInName: string, Outer?: Object): ActorMacros_C;
-        static Load(InName: string): ActorMacros_C;
     }
     
     class SequenceRecordingBase extends Object {
@@ -32238,9 +32230,13 @@ declare module "ue" {
     
     class FairyGUIObject extends Object {
         constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
+        ui: GObject;
         OnTick(): void;
         OnStart(): void;
         OnEnd(): void;
+        static GetUIByName(name: string): GObject;
+        static GetUIByID(id: string): GObject;
+        static GetAllPages(): TArray<FairyGUIObject>;
         static StaticClass(): Class;
         static Find(OrigInName: string, Outer?: Object): FairyGUIObject;
         static Load(InName: string): FairyGUIObject;
@@ -57234,25 +57230,6 @@ declare module "ue" {
         static Load(InName: string): PropertyValueVisibility;
     }
     
-    class PROTO_BP_AnimBlueprint_0_C extends AnimInstance {
-        constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
-        UberGraphFrame: PointerToUberGraphFrame;
-        AnimGraphNode_Root: AnimNode_Root;
-        AnimGraph(AnimGraph: $Ref<PoseLink>): void;
-        ExecuteUbergraph_PROTO_BP_AnimBlueprint_0(EntryPoint: number): void;
-        static StaticClass(): Class;
-        static Find(OrigInName: string, Outer?: Object): PROTO_BP_AnimBlueprint_0_C;
-        static Load(InName: string): PROTO_BP_AnimBlueprint_0_C;
-    }
-    
-    class PROTO_BP_Blueprint_0_C extends Actor {
-        constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
-        DefaultSceneRoot: SceneComponent;
-        static StaticClass(): Class;
-        static Find(OrigInName: string, Outer?: Object): PROTO_BP_Blueprint_0_C;
-        static Load(InName: string): PROTO_BP_Blueprint_0_C;
-    }
-    
     class ProxyLODMeshSimplificationSettings extends DeveloperSettings {
         constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
         ProxyLODMeshReductionModuleName: string;
@@ -57820,23 +57797,6 @@ declare module "ue" {
         static StaticClass(): Class;
         static Find(OrigInName: string, Outer?: Object): RenderTargetExporterHDR;
         static Load(InName: string): RenderTargetExporterHDR;
-    }
-    
-    enum EIntTypes { int, int2, int3, int4, EIntTypes_MAX}
-    class RenderToTextureFunctionLibrary_C extends BlueprintFunctionLibrary {
-        constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
-        static ["Set Canvas Material Scale and Position"](Size: Vector2D, Position: Vector2D, Scale: number, __WorldContext: $Nullable<Object>, ScreenPosition: $Ref<Vector2D>, ScreenSize: $Ref<Vector2D>): void;
-        static ["Array to HLSL Int Array"](Type: EIntTypes, VariableName: $Ref<string>, int: $Ref<TArray<number>>, int2: $Ref<TArray<Vector2D>>, int3: $Ref<TArray<Vector>>, int4: $Ref<TArray<LinearColor>>, __WorldContext: $Nullable<Object>, String: $Ref<string>): void;
-        static StaticClass(): Class;
-        static Find(OrigInName: string, Outer?: Object): RenderToTextureFunctionLibrary_C;
-        static Load(InName: string): RenderToTextureFunctionLibrary_C;
-    }
-    
-    class RenderToTextureMacros_C extends Actor {
-        constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
-        static StaticClass(): Class;
-        static Find(OrigInName: string, Outer?: Object): RenderToTextureMacros_C;
-        static Load(InName: string): RenderToTextureMacros_C;
     }
     
     class ReplaceActorCommandlet extends Commandlet {
@@ -62803,13 +62763,6 @@ declare module "ue" {
         static StaticClass(): Class;
         static Find(OrigInName: string, Outer?: Object): TurnBasedBlueprintLibrary;
         static Load(InName: string): TurnBasedBlueprintLibrary;
-    }
-    
-    class Tutorial_BP_MacroLib_C extends EditorTutorial {
-        constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
-        static StaticClass(): Class;
-        static Find(OrigInName: string, Outer?: Object): Tutorial_BP_MacroLib_C;
-        static Load(InName: string): Tutorial_BP_MacroLib_C;
     }
     
     class TutorialSettings extends Object {

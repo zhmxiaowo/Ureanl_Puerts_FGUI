@@ -10,15 +10,19 @@ void UJSSubsystem::Initialize(FSubsystemCollectionBase& Collection)
 
 void UJSSubsystem::Deinitialize()
 {
+	Stop();
 	Super::Deinitialize();
 }
 
 void UJSSubsystem::Start(FString tsFile)
 {
-	GameScript = MakeShared<puerts::FJsEnv>();
+	if (!GameScript.IsValid())
+	{
+		GameScript = MakeShared<puerts::FJsEnv>();
+	}
 	TArray<TPair<FString, UObject*>> Arguments;
-	Arguments.Add(TPair<FString, UObject*>(TEXT("GameInstance"),this->GetGameInstance()));
-	GameScript->Start(tsFile,Arguments);
+	Arguments.Add(TPair<FString, UObject*>(TEXT("GameInstance"), this->GetGameInstance()));
+	GameScript->Start(tsFile, Arguments);
 }
 
 bool UJSSubsystem::Tick(float deltaTime)

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="800,400">
+  <displayList>
+    <component id="n0_jc04" name="frame" src="twdu1" fileName="errorWindow/frame.xml" xy="0,0"/>
+  </displayList>
+</component>

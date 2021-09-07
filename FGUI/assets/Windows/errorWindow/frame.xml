@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="800,400" extention="Label">
+  <displayList>
+    <graph id="n1_jc04" name="bg" xy="0,0" size="800,400" type="rect" lineColor="#ff00ff00" fillColor="#b2000000" corner="20"/>
+    <text id="n0_twdu" name="title" xy="-1,17" size="800,64" fontSize="28" color="#ffffff" align="center" vAlign="middle" autoSize="none" singleLine="true" text="标题!">
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+    <component id="n3_jc04" name="closeButton" src="jc047" fileName="errorWindow/CloseButton.xml" xy="723,19"/>
+    <graph id="n4_jc04" name="dragArea" xy="2,1" size="721,83" type="rect" lineSize="0" lineColor="#00000000" fillColor="#00ffffff"/>
+    <component id="n5_jc04" name="comfirm" src="jc045" fileName="errorWindow/Comfirm.xml" xy="303,325"/>
+    <richtext id="n6_jc04" name="info" xy="34,107" size="743,191" fontSize="21" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="今天天气很好"/>
+  </displayList>
+</component>

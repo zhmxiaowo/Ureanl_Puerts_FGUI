@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="b0d123p9">
+  <resources>
+    <component id="twdu1" name="frame.xml" path="/errorWindow/"/>
+    <component id="jc043" name="UIInfo.xml" path="/errorWindow/" exported="true"/>
+    <component id="jc045" name="Comfirm.xml" path="/errorWindow/"/>
+    <component id="jc047" name="CloseButton.xml" path="/errorWindow/"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>
